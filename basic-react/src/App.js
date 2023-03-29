@@ -1,17 +1,20 @@
 import './App.css';
 import Counter from './Components/Counter';
 import EventBind from './Components/EventBind';
+import Form from './Components/Form';
 import Message from './Components/Message';
-import  Parent  from './Components/Parent.jsx';
+import Parent from './Components/Parent.jsx';
 
 function App() {
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <Parent/>
+      {/* <Parent/>
       <Message/>
-      {/* <Counter/> */}
-      <EventBind/>
+      <Counter/> 
+      <EventBind/> */}
+      <Form/>
+
     </div>
   );
 }
