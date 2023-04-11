@@ -1,5 +1,5 @@
 import './App.css';
-import ComponentE from './Components/ComponentE';
+import ComponentC from './Components/ComponentC';
 import Counter from './Components/Counter';
 import EventBind from './Components/EventBind';
 import Form from './Components/Form';
@@ -17,7 +17,7 @@ function App() {
       <EventBind/> */}
       {/* <Form/> */}
       <UserProvider value="Kush">
-        <ComponentE />
+        <ComponentC />
       </UserProvider>
 
     </div>
