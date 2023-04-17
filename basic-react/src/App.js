@@ -3,6 +3,7 @@ import About from './Components/About';
 import ComponentC from './Components/ComponentC';
 import Contact from './Components/Contact';
 import Counter from './Components/Counter';
+import DataFetching from './Components/DataFetching';
 import EventBind from './Components/EventBind';
 import Form from './Components/Form';
 import HookCounter from './Components/HookCounter';
@@ -17,7 +18,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   return (
-    <Router>
       <div className="App">
         {/* <h1>Hello World</h1> */}
         {/* <Parent/>
@@ -34,23 +34,23 @@ function App() {
 
         {/* <HookCounter3/> */}
         {/* <HookCounter4/> */}
-        <nav>
+        {/* <nav>
           <ul>
             <li><Link to="/" >Home</Link></li>
             <li><Link to="/about" >About</Link></li>
             <li><Link to="/shop" >Shop</Link></li>
             <li><Link to="/contact" >Contact</Link></li>
           </ul>
-        </nav>
-        <Routes>
+        </nav> */}
+        {/* <Routes>
           <Route excat path='/' element={<HookCounter4 />}></Route>
           <Route excat path='/about' element={<About />}></Route>
           <Route excat path='/shop' element={<Shop />}></Route>
           <Route excat path='/contact' element={<Contact primary={true} />}></Route>
-        </Routes>
+        </Routes> */}
+        <DataFetching/>
 
       </div>
-    </Router>
   );
 }
 
