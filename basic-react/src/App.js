@@ -1,3 +1,4 @@
+import CustomerList from '../CustomerList';
 import './App.css';
 import About from './Components/About';
 import ComponentC from './Components/ComponentC';
@@ -48,7 +49,8 @@ function App() {
           <Route excat path='/shop' element={<Shop />}></Route>
           <Route excat path='/contact' element={<Contact primary={true} />}></Route>
         </Routes> */}
-        <DataFetching/>
+        {/* <DataFetching/> */}
+        <CustomerList/>
 
       </div>
   );
