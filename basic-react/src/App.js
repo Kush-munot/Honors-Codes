@@ -1,4 +1,4 @@
-import CustomerList from '../CustomerList';
+import CustomerList from './Components/CustomerList';
 import './App.css';
 import About from './Components/About';
 import ComponentC from './Components/ComponentC';
@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   return (
+    <Router>
       <div className="App">
         {/* <h1>Hello World</h1> */}
         {/* <Parent/>
@@ -35,24 +36,27 @@ function App() {
 
         {/* <HookCounter3/> */}
         {/* <HookCounter4/> */}
-        {/* <nav>
+        <nav>
           <ul>
             <li><Link to="/" >Home</Link></li>
-            <li><Link to="/about" >About</Link></li>
+            <li><Link to="/customers" >All Customers</Link></li>
+            {/* <li><Link to="/about" >About</Link></li>
             <li><Link to="/shop" >Shop</Link></li>
-            <li><Link to="/contact" >Contact</Link></li>
+            <li><Link to="/contact" >Contact</Link></li> */}
+
           </ul>
-        </nav> */}
-        {/* <Routes>
-          <Route excat path='/' element={<HookCounter4 />}></Route>
+        </nav>
+        <Routes>
+          {/* <Route excat path='/' element={<HookCounter4 />}></Route>
           <Route excat path='/about' element={<About />}></Route>
           <Route excat path='/shop' element={<Shop />}></Route>
-          <Route excat path='/contact' element={<Contact primary={true} />}></Route>
-        </Routes> */}
+          <Route excat path='/contact' element={<Contact primary={true} />}></Route> */}
+          <Route excat path='/customers' element={<CustomerList/>}></Route> 
+        </Routes>
         {/* <DataFetching/> */}
-        <CustomerList/>
 
       </div>
+    </Router>
   );
 }
 
