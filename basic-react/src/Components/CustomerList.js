@@ -19,9 +19,20 @@ export default class CustomerList extends Component {
         })
     }
 
-    /* deleteHandler = id => {
-        axios.delete
-    } */
+    deleteHandler = async (id) => {
+        try {
+            const resp = await axios.delete("http://localhost:5000/customers/" + id);
+            this.setState({
+                customers: this.state.customers.filter((resp) => {
+                    if (!resp._id.includes(id)) {
+                        return resp;
+                    }
+                }),
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     renderTableData() {
         return this.state.customers.map((customer, index) => {
@@ -30,8 +41,11 @@ export default class CustomerList extends Component {
                 this.state.searchTerm.toLowerCase())) {
                 return (
                     <tr key={_id}>
+                        <td>{id}</td>
                         <td>{firstName}</td>
                         <td>{lastName}</td>
+                        <td>{gender}</td>
+                        <td>{age}</td>
                         <td><button onClick={() => this.editHandler(_id)}>Edit</button></td>
                         <td><button onClick={() => this.deleteHandler(_id)}>Delete</button></td>
                     </tr>
@@ -45,8 +59,8 @@ export default class CustomerList extends Component {
             <div>
                 <input type='text' placeholder='Search...'
                     onChange={(event) => this.searchText(event.target.value)}></input>
-                <table id='customers'>
-                        {this.renderTableData()}
+                <table id='customers' align='center'>
+                    {this.renderTableData()}
                 </table>
             </div>
         )
