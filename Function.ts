@@ -3,8 +3,6 @@ function Message(){
     console.log("Message")
 
 }
-
-
 Message();
 
 var ms= function()

@@ -12,6 +12,7 @@ interface Employee extends PersonDetails, Person{
 }
 
 let empcode = <Employee>{};
+empcode.name="Kush Munot"
 empcode.age = 78;
 empcode.gender = "male";
 empcode.salary = 100000

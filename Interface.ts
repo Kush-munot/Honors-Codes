@@ -26,4 +26,5 @@ class Student implements Person {
 }
 
 let student = new Student("Kush", "Munot", 22);
-console(student.getFullName())
+console.log(student.getFullName())
+console.log(student.getAge())
